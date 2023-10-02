@@ -1,3 +1,5 @@
+const std = @import("std");
+const builtin = @import("builtin");
 // Return int
 pub fn sum(x: i32, y: i32) i32 {
     return x + y;
@@ -8,7 +10,6 @@ pub fn checkAge(x: i32) bool {
     return x >= 18;
 }
 
-// Return string
 pub fn getGreeting(name: []const u8) []const u8 {
     return "Hello " + name;
 }
