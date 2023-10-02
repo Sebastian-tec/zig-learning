@@ -4,8 +4,14 @@ const std = @import("std");
 const helper = @import("./library.zig");
 
 pub fn main() void {
-    std.debug.print("{s}", .{helper.getGreeting(Person.name)});
+    // Instantiate a struct with 2 fields.
+    const me = Person{ .name = "Sebastian", .age = 20 };
+
+    // Print a field from the struct
+    std.debug.print("Hello {s}", .{me.name});
+    // std.debug.print("{s}", .{helper.getGreeting(me.name)});
+    // std.debug.print("Above 18: {b}", helper.checkAge(me.age));
 }
 
 // Struct with 2 fields. I'm not sure how to make it a type yet.'
-const Person = struct { name: []const u8 = "Sebastian", age: i32 = 11 };
+const Person = struct { name: []const u8, age: i32 };

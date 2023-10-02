@@ -9,7 +9,7 @@ pub fn checkAge(x: i32) bool {
 }
 
 // Return string
-pub fn getGreeting(name: []u8) []u8 {
+pub fn getGreeting(name: []const u8) []const u8 {
     return "Hello " + name;
 }
 
